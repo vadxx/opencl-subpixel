@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3A573BB72088BDB000132836 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A573BB62088BDB000132836 /* main.cpp */; };
+		3A573BBE2088BDC400132836 /* mykernel.cl in Sources */ = {isa = PBXBuildFile; fileRef = 3A573BBD2088BDC400132836 /* mykernel.cl */; };
+		3A573BC12088BDE300132836 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A573BC02088BDE300132836 /* OpenCL.framework */; };
+		3A573BC42088C10500132836 /* libopencv_core.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A573BC32088C10500132836 /* libopencv_core.3.4.1.dylib */; };
+		3A573BC62088C12200132836 /* libopencv_img_hash.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A573BC52088C12200132836 /* libopencv_img_hash.3.4.1.dylib */; };
+		3A573BC82088C13A00132836 /* libopencv_highgui.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A573BC72088C13A00132836 /* libopencv_highgui.3.4.1.dylib */; };
+		3A573BCA2088C1FF00132836 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A573BC92088C1FE00132836 /* libopencv_imgcodecs.3.4.1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,14 @@
 /* Begin PBXFileReference section */
 		3A573BB32088BDB000132836 /* newPixelCL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = newPixelCL; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A573BB62088BDB000132836 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3A573BBD2088BDC400132836 /* mykernel.cl */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.opencl; path = mykernel.cl; sourceTree = "<group>"; };
+		3A573BC02088BDE300132836 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
+		3A573BC22088C0B700132836 /* rr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rr.jpg; sourceTree = "<group>"; };
+		3A573BC32088C10500132836 /* libopencv_core.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.3.4.1.dylib; path = ../../../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_core.3.4.1.dylib; sourceTree = "<group>"; };
+		3A573BC52088C12200132836 /* libopencv_img_hash.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_img_hash.3.4.1.dylib; path = ../../../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_img_hash.3.4.1.dylib; sourceTree = "<group>"; };
+		3A573BC72088C13A00132836 /* libopencv_highgui.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.3.4.1.dylib; path = ../../../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_highgui.3.4.1.dylib; sourceTree = "<group>"; };
+		3A573BC92088C1FE00132836 /* libopencv_imgcodecs.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgcodecs.3.4.1.dylib; path = ../../../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_imgcodecs.3.4.1.dylib; sourceTree = "<group>"; };
+		3A573BCD2088E14500132836 /* cl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cl.hpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A573BCA2088C1FF00132836 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */,
+				3A573BC82088C13A00132836 /* libopencv_highgui.3.4.1.dylib in Frameworks */,
+				3A573BC62088C12200132836 /* libopencv_img_hash.3.4.1.dylib in Frameworks */,
+				3A573BC42088C10500132836 /* libopencv_core.3.4.1.dylib in Frameworks */,
+				3A573BC12088BDE300132836 /* OpenCL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +62,7 @@
 			children = (
 				3A573BB52088BDB000132836 /* newPixelCL */,
 				3A573BB42088BDB000132836 /* Products */,
+				3A573BBF2088BDE300132836 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +77,24 @@
 		3A573BB52088BDB000132836 /* newPixelCL */ = {
 			isa = PBXGroup;
 			children = (
+				3A573BCD2088E14500132836 /* cl.hpp */,
+				3A573BC22088C0B700132836 /* rr.jpg */,
 				3A573BB62088BDB000132836 /* main.cpp */,
+				3A573BBD2088BDC400132836 /* mykernel.cl */,
 			);
 			path = newPixelCL;
+			sourceTree = "<group>";
+		};
+		3A573BBF2088BDE300132836 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A573BC92088C1FE00132836 /* libopencv_imgcodecs.3.4.1.dylib */,
+				3A573BC72088C13A00132836 /* libopencv_highgui.3.4.1.dylib */,
+				3A573BC52088C12200132836 /* libopencv_img_hash.3.4.1.dylib */,
+				3A573BC32088C10500132836 /* libopencv_core.3.4.1.dylib */,
+				3A573BC02088BDE300132836 /* OpenCL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A573BB72088BDB000132836 /* main.cpp in Sources */,
+				3A573BBE2088BDC400132836 /* mykernel.cl in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +274,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/opencv/3.4.1_2/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,6 +287,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/opencv/3.4.1_2/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
