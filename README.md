@@ -1,6 +1,6 @@
 # opencl-sub_pixel
 
-Test new OpenCL sub_Pixel
+Test New realization OpenCL sub_Pixel
 
 Output:
 ```
